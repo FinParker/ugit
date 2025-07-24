@@ -23,6 +23,10 @@ def parse_args():
     init_parser.set_defaults(func=init)
     # args.func = init
 
+    hash_object_parser = commands.add_parser('hash-object')
+    hash_object_parser.set_defaults(func=hash_object)
+    hash_object_parser.add_argument('file')
+
     args = parser.parse_args()
 
     if args.debug:
@@ -34,3 +38,8 @@ def init(args):
     logging.debug('init process begin')
     data.init()
     logging.debug(f'Initialized empty ugit repository in {os.getcwd()}/{data.UGIT_DIR}')
+
+def hash_object(args):
+    with open(args.file, 'rb') as f:
+        print(f'file <{args.file}> hashed, SHA1 code:')
+        print(data.hash_object(f.read()))
