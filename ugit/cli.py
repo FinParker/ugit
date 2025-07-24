@@ -1,5 +1,7 @@
 import argparse
 import logging
+import os
+from . import data
 
 logging.basicConfig(level=logging.INFO)
 
@@ -30,3 +32,5 @@ def parse_args():
 
 def init(args):
     logging.debug('init process begin')
+    data.init()
+    logging.debug(f'Initialized empty ugit repository in {os.getcwd()}/{data.UGIT_DIR}')
