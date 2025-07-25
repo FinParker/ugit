@@ -9,11 +9,15 @@ pip install -e .
 ## usage
 
 ```bash
-ugit --debug init
+ugit --help
 ```
 
 ## example
 
 ```bash
 ugit --debug init
+
+ugit --debug hash-object <file>
+
+ugit --debug cat-file <object>
 ```
