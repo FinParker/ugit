@@ -58,4 +58,5 @@ def hash_object(args):
 
 def cat_file(args):
     sys.stdout.flush()
-    sys.stdout.buffer.write(data.get_object(args.object_id))
+    # don't expect any type, just output this object
+    sys.stdout.buffer.write(data.get_object(args.object_id, expected=None))
