@@ -1,5 +1,18 @@
 # ugit
 
+## use venv
+
+```bash
+python -m venv venv
+
+# Windows(PowerShell)
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+venv\Scripts\activate
+
+# Unix/MacOS
+source venv/bin/activate
+```
+
 ## develop
 
 ```bash
