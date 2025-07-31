@@ -34,3 +34,11 @@ ugit --debug hash-object <file>
 
 ugit --debug cat-file <object>
 ```
+
+## notes
+
+In Git's lingo a "tree" means a directory.
+
+## tree object
+A tree object is a ugit object that represents a directory.
+
